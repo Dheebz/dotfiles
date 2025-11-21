@@ -36,6 +36,7 @@ CLI_PACKAGES=(
   pinentry-mac
   node
   uv
+  act
 )
 
 # GUI apps installed via Homebrew casks
