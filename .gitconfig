@@ -33,3 +33,5 @@
 	editor = nvim
 [log]
 	showSignature = true
+[alias]
+	adog = log --all --decorate --oneline --graph
