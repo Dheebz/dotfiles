@@ -1,0 +1,41 @@
+########################################
+# .secure (keep only .gitkeep)
+########################################
+.secure/**
+
+# allow directory traversal
+!.secure/
+!.secure/**/
+
+# keep placeholders only
+!.secure/**/.gitkeep
+
+
+########################################
+# .config (deny by default)
+########################################
+.config/**
+
+# allow directory traversal
+!.config/
+!.config/**/
+
+# allow specific config files/dirs
+!.config/starship.toml
+
+!.config/git/
+!.config/git/**
+
+!.config/karabiner/
+!.config/karabiner/**
+
+########################################
+# Neovim (allowlist: lua + README + init.lua)
+########################################
+!.config/nvim/
+!.config/nvim/**          # allow traversal into nvim
+.config/nvim/**           # ignore everything under nvim by default
+!.config/nvim/init.lua
+!.config/nvim/README.md
+!.config/nvim/**/*.lua
+

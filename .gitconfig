@@ -1,0 +1,35 @@
+[core]
+	excludesfile = /Users/dheebz/.gitignore_global
+	editor = nvim
+[user]
+	email = 148539956+Dheebz@users.noreply.github.com
+	signingkey = /Users/dheebz/.ssh/Signing - Janus - Dheebz@Github.pub
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[gpg "ssh"]
+	allowedSignersFile = /Users/dheebz/.config/git/allowed_signers
+[push]
+	default = simple
+	autoSetupRemote = true
+[merge]
+	conflictStyle = zdiff3
+[rerere]
+	enabled = true
+[diff]
+	algorithm = histogram
+	colorMoved = zebra
+[fetch]
+	prune = true
+	pruneTags = true
+[status]
+	branch = true
+[branch]
+	sort = -committerdate
+[sequence]
+	editor = nvim
+[log]
+	showSignature = true
