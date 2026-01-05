@@ -1,0 +1,65 @@
+# CLI Tools
+brew "age"                 # Modern file encryption tool
+brew "bat"                 # Clone of cat(1) with syntax highlighting and Git integration
+brew "bitwarden-cli"       # Secure and free password manager for all of your devices
+brew "bottom"              # Modern htop alternative
+brew "direnv"              # Load/unload environment variables based on $PWD
+brew "eza"                 # Modern, maintained replacement for ls
+brew "fd"                  # Simple, fast and user-friendly alternative to find
+brew "fzf"                 # Command-line fuzzy finder written in Go
+brew "gh"                  # GitHub command-line tool
+brew "git"                 # Distributed revision control system
+brew "git-delta"           # Syntax-highlighting pager for git and diff output
+brew "helix"               # Post-modern modal text editor
+brew "httpie"              # Friendly CLI HTTP client
+brew "hyperfine"           # Command benchmarking tool
+brew "ipcalc"              # IP address calculator
+brew "jq"                  # Lightweight and flexible command-line JSON processor
+brew "elixir"              # Elixir language
+brew "elixir-ls"           # Elixir language server
+#brew "llvm"                # clangd/clang-format (C/C++)
+brew "lua-language-server" # Lua LSP
+brew "marksman"            # Markdown LSP
+brew "node"                # Node.js (for language servers and tooling)
+brew "prettier"            # JS/TS formatter
+#brew "mitmproxy"           # Intercept and inspect HTTP(S) traffic
+brew "procs"               # Modern replacement for ps
+brew "ripgrep"             # Search tool like grep and The Silver Searcher
+brew "ruff"                # Python linter/formatter
+brew "rustup"              # Rust toolchain manager
+brew "rust-analyzer"       # Rust LSP
+brew "sops"                # Secret management with AWS/GCP/KMS + age/GPG
+brew "svls"                # SQL LSP
+brew "starship"            # Cross-shell prompt for astronauts
+brew "stylua"              # Lua formatter
+brew "shfmt"               # Shell formatter
+brew "taplo"               # TOML LSP
+brew "tldr"                # Simplified man pages
+brew "texlab"              # LaTeX LSP
+brew "tree"                # Display directories as trees (with optional color/HTML output)
+brew "ty"                  # Astral static type checker for Python
+brew "uv"                  # Astral's Python package/deps manager
+brew "yazi"                # Terminal file manager written in Rust
+brew "zoxide"              # Shell extension to navigate your filesystem faster
+brew "zsh-autosuggestions" # Fish-like autosuggestions for zsh
+brew "zsh-syntax-highlighting" # Syntax highlighting for zsh
+#brew "doggo"               # Modern alternative to dig
+brew "go"                  # Go programming language
+brew "gopls"               # Go LSP
+
+# Node-based language servers
+
+# GUI Apps (Casks)
+cask "font-jetbrains-mono-nerd-font" # Dev font with Nerd symbols
+cask "google-chrome"                 # Browser
+cask "thunderbird"                  # Mozilla email client
+cask "karabiner-elements"           # Keyboard remapping
+cask "spotify"                      # Music
+cask "visual-studio-code"           # VS Code — necessary evil
+cask "wezterm"                      # GPU-accelerated terminal
+cask "docker-desktop"               # Containers
+cask "zed"                          # Rust-native fast code editor
+cask "rectangle"                    # Window snapping manager
+cask "stats"                        # Menu bar system monitor
+cask "bitwarden"                    # Bitwarden desktop GUI
+cask "hiddenbar"                    # Optional: collapses menu bar clutter

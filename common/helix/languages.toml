@@ -1,0 +1,286 @@
+#############################################
+# Language Servers (you must install these)
+#############################################
+
+# Python (Astral)
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+# Ruff formatting options (keeps you on modern formatting behavior)
+[language-server.ruff.config.settings.format]
+preview = true
+
+# Rust
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+# Go
+[language-server.gopls]
+command = "gopls"
+
+# C / C++
+[language-server.clangd]
+command = "clangd"
+
+# Shell
+[language-server.bash-language-server]
+command = "bash-language-server"
+args = ["start"]
+
+# Dockerfile
+[language-server.docker-langserver]
+command = "docker-langserver"
+args = ["--stdio"]
+
+# JSON
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+
+# YAML
+[language-server.yaml-language-server]
+command = "yaml-language-server"
+args = ["--stdio"]
+
+# TOML
+[language-server.taplo]
+command = "taplo"
+args = ["lsp", "stdio"]
+
+# Markdown
+[language-server.marksman]
+command = "marksman"
+args = ["server"]
+
+# SQL
+[language-server.svls]
+command = "svls"
+
+# LaTeX
+[language-server.texlab]
+command = "texlab"
+
+# Lua
+[language-server.lua-language-server]
+command = "lua-language-server"
+
+# Elixir
+[language-server.elixir-ls]
+command = "elixir-ls"
+
+# TypeScript/JavaScript
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+
+#############################################
+# Languages (overrides)
+#############################################
+
+# ---- Python: ty + ruff (lint/format) ----
+[[language]]
+name = "python"
+language-servers = ["ty", "ruff"]
+auto-format = true
+# Ruff handles formatting via LSP; no external formatter needed.
+
+
+# ---- Rust ----
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+auto-format = true
+formatter = { command = "rustfmt", args = ["--emit", "stdout"] }
+
+
+# ---- Go ----
+[[language]]
+name = "go"
+language-servers = ["gopls"]
+auto-format = true
+formatter = { command = "gofmt" }
+
+
+# ---- C ----
+[[language]]
+name = "c"
+language-servers = ["clangd"]
+auto-format = true
+formatter = { command = "clang-format", args = ["-assume-filename", "%{buffer_name}"] }
+
+
+# ---- C++ ----
+[[language]]
+name = "cpp"
+language-servers = ["clangd"]
+auto-format = true
+formatter = { command = "clang-format", args = ["-assume-filename", "%{buffer_name}"] }
+
+
+
+
+# ---- Shell (bash + zsh files are handled under "bash" in Helix) ----
+[[language]]
+name = "bash"
+language-servers = ["bash-language-server"]
+auto-format = true
+formatter = { command = "shfmt", args = ["-"] }
+
+
+# ---- Dockerfile ----
+[[language]]
+name = "dockerfile"
+language-servers = ["docker-langserver"]
+auto-format = false
+# Dockerfile formatting is optional; leaving off avoids surprises.
+
+# ---- Docker Compose (YAML) ----
+[[language]]
+name = "docker-compose"
+language-servers = ["yaml-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
+
+
+# ---- Makefile ----
+[[language]]
+name = "make"
+auto-format = false
+# Make is whitespace-sensitive; keep formatting off.
+
+
+# ---- Lua ----
+[[language]]
+name = "lua"
+language-servers = ["lua-language-server"]
+auto-format = true
+formatter = { command = "stylua", args = ["-"] }
+
+# ---- TypeScript / JavaScript ----
+[[language]]
+name = "typescript"
+language-servers = ["typescript-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+
+[[language]]
+name = "tsx"
+language-servers = ["typescript-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "babel"] }
+
+[[language]]
+name = "jsx"
+language-servers = ["typescript-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "babel"] }
+
+# ---- Elixir ----
+[[language]]
+name = "elixir"
+language-servers = ["elixir-ls"]
+auto-format = false
+
+[[language]]
+name = "heex"
+language-servers = ["elixir-ls"]
+auto-format = false
+
+[[language]]
+name = "eex"
+language-servers = ["elixir-ls"]
+auto-format = false
+
+# ---- JQ ----
+[[language]]
+name = "jq"
+auto-format = false
+
+
+# ---- SQL ----
+[[language]]
+name = "sql"
+language-servers = ["svls"]
+auto-format = false
+# Once you pick a formatter, you can enable. Example with sqlfluff (dialect matters):
+# auto-format = true
+# formatter = { command = "sqlfluff", args = ["format", "-"] }
+
+
+# ---- LaTeX ----
+[[language]]
+name = "latex"
+language-servers = ["texlab"]
+auto-format = false
+# latexindent typically wants file-based formatting; keep off by default.
+
+
+# ---- TOML ----
+[[language]]
+name = "toml"
+language-servers = ["taplo"]
+auto-format = true
+formatter = { command = "taplo", args = ["format", "-"] }
+
+
+# ---- YAML ----
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
+
+
+# ---- JSON ----
+[[language]]
+name = "json"
+language-servers = ["vscode-json-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "json"] }
+
+
+# ---- Markdown ----
+[[language]]
+name = "markdown"
+language-servers = ["marksman"]
+auto-format = false
+# If you want prettier formatting for markdown:
+# auto-format = true
+# formatter = { command = "prettier", args = ["--parser", "markdown"] }
+
+# ---- Git filetypes ----
+[[language]]
+name = "git-attributes"
+auto-format = false
+
+[[language]]
+name = "git-commit"
+auto-format = false
+
+[[language]]
+name = "git-config"
+auto-format = false
+
+[[language]]
+name = "git-ignore"
+auto-format = false
+
+[[language]]
+name = "git-notes"
+auto-format = false
+
+[[language]]
+name = "git-rebase"
+auto-format = false

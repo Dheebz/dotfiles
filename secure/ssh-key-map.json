@@ -1,0 +1,17 @@
+{
+  "github": {
+    "auth": {
+      "bitwarden_item": "Auth - Dheebz@GitHub.com",
+      "file": "github_dheebz_auth",
+      "ssh_config": {
+        "host": "github.com",
+        "user": "git",
+        "generate_entry": true
+      }
+    },
+    "signing": {
+      "bitwarden_item": "Signing - Dheebz@GitHub.com",
+      "file": "github_dheebz_signing"
+    }
+  }
+}

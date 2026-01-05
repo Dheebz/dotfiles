@@ -1,0 +1,7 @@
+{
+  "AOC_SESSION": {
+    "bitwarden_item": "Advent of Code - Session Token",
+    "field": "login.password",
+    "write_to_file": true
+  }
+}
