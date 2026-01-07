@@ -284,3 +284,20 @@ auto-format = false
 [[language]]
 name = "git-rebase"
 auto-format = false
+
+
+
+[language-server.sql-language-server]
+command = "sql-language-server"
+args = ["up", "--method", "stdio"]
+
+[language-server.sql-language-server.config]
+# Optional but very useful
+connections = [
+  { driver = "postgresql", dataSourceName = "postgres://user:password@localhost:5432/dbname" }
+]
+
+[[language]]
+name = "sql"
+language-servers = ["sql-language-server"]
+
