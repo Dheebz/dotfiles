@@ -46,6 +46,11 @@ brew "zsh-syntax-highlighting" # Syntax highlighting for zsh
 #brew "doggo"               # Modern alternative to dig
 brew "go"                  # Go programming language
 brew "gopls"               # Go LSP
+brew "act"                 # Run GitHub Actions locally
+brew "bash"                # Bourne-Again SHell (updated)
+brew "dockutil"            # Manage macOS Dock items
+brew "dotnet"              # .NET runtime and SDK
+brew "neovim"              # Hyperextensible Vim-based text editor
 
 # Node-based language servers
 
@@ -63,3 +68,6 @@ cask "rectangle"                    # Window snapping manager
 cask "stats"                        # Menu bar system monitor
 cask "bitwarden"                    # Bitwarden desktop GUI
 cask "hiddenbar"                    # Optional: collapses menu bar clutter
+cask "homerow"                      # Keyboard-driven UI navigation
+cask "claude-code"                  # Anthropic Claude CLI
+cask "codex"                        # OpenAI Codex CLI
