@@ -74,6 +74,25 @@ cursor-line = "warning"
 [keys.normal]
 tab = "move_parent_node_end"
 S-tab = "move_parent_node_start"
+K = "hover"
+
+[keys.normal.space.l]
+d = "goto_definition"
+r = "goto_reference"
+i = "goto_implementation"
+t = "goto_type_definition"
+R = "rename_symbol"
+a = "code_action"
+h = ":toggle-option lsp.display-inlay-hints"
+s = "signature_help"
+
+[keys.normal."]"]
+d = "goto_next_diag"
+D = "goto_last_diag"
+
+[keys.normal."["]
+d = "goto_prev_diag"
+D = "goto_first_diag"
 
 [keys.insert]
 S-tab = "move_parent_node_start"
