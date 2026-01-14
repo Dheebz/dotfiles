@@ -186,3 +186,5 @@ config
 !*.asc.pub
 !*.pem.pub
 !.gitkeep
+
+.claude

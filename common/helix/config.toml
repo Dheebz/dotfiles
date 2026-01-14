@@ -74,19 +74,6 @@ cursor-line = "warning"
 [keys.normal]
 tab = "move_parent_node_end"
 S-tab = "move_parent_node_start"
-# Spotify-CLI commansd
-"A-l" = ":sh spotify-cli track like"
-"A-L" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Playlist add (name):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli playlist add \"$q\"'"
-"A-s" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Spotify query (user):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli search \"$q\" --user --fuzzy --play'"
-"A-S" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Spotify query (global):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli search \"$q\" --fuzzy --play'"
-"A-r" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Artist search (user):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli artist search \"$q\" --user --fuzzy --play'"
-"A-R" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Artist search (global):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli artist search \"$q\" --fuzzy --play'"
-"A-a" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Album search (user):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli album search \"$q\" --user --fuzzy --play'"
-"A-A" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Album search (global):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli album search \"$q\" --fuzzy --play'"
-"A-p" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Playlist search (user):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli playlist search \"$q\" --user --fuzzy --play'"
-"A-P" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Playlist search (global):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli playlist search \"$q\" --fuzzy --play'"
-"A-t" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Track search (user):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli track search \"$q\" --user --fuzzy --play'"
-"A-T" = ":sh sh -c 'q=$(osascript -e \"text returned of (display dialog \\\"Track search (global):\\\" default answer \\\"\\\")\"); [ -n \"$q\" ] && spotify-cli track search \"$q\" --fuzzy --play'"
 
 [keys.insert]
 S-tab = "move_parent_node_start"
